@@ -95,4 +95,27 @@ docker run java-app
 8. When U run the Image, it creates a container in which UR App executes. 
 <b>options:</b>
 1. -t => Flag that tells the Docker to allocate Virtual Terminal within the Container to start UR Program and view the results. 
-2. -i =>Flat U set while running the Program in interactive mode, usefull when you have to take inputs from the User. 
+2. -i =>Flat U set while running the Program in interactive mode, usefull when you have to take inputs from the User.
+
+
+## JENKINS
+### What is Continuous Integration?
+A orchestration of a chain of activities to be performed when a code is pushed to the REPO and rest of the operations are taken up automatically that helps in pipelining the application build, test and deployment and also do some operational sequences all done without an exclusive resource to monitor it. The CIT(Continuous Integration Tool) is resposible to keep track on any code change that is pushed into the repo, triggering a series of tasks and finally do a post build task before terminating the Execution. 
+These series of tasks could be pulling the code from the REPO,   setting the required options for building the Application, build the code, Test the Application as per the Unit Testing and the Integration Testing, run to E2E Test cases and finally push the completed Application into a designated storage place like DOCKER, CLOUD PAAS or the System located within the Enterprise. 
+The MOST POPULAR CIT is JENKINS. 
+
+#### How JENKINS work?
+- It is basically a server side Web App that runs on Apache tomcat. It can run on multiple platforms like Windows, Mac or Linux. To use Jenkins, we need to create pipelines or a group of tasks which work like a chain of operations. It provides a continuos proceess that will monitor the Environment all the time. 
+- Jenkins internally used rd party tools to build, test and monitor the application sequence, raise reports for the performance monitoring, enforce coding rules as per the supplied LINTING software, update the changes and even trigger emails to all the stake holders of the product. 
+
+#### How to install and run the JENKINS to build a simple Java Application.
+1. Download the JDK 8.0 or later, Set the Environment variable like JAVA_HOME, JRE_HOME and Path. 
+2. Download the Jenkins from the Home Website.
+3. During the Installation, the wizard asks for the JRE Location which u could provide
+4. U could optionally set the port no from which the JENKINS service be availed. 
+5. U can login to the Jenkins Application using secret password provided by the instalation setup. Open the Jenkins app from the browser and use the following URL:
+http://localhost:9000/
+6. U can provide UR own user name and get the Preset password available in UR local machine at C:\ProgramData\Jenkins\.jenkins\secrets\initialAdminPassword. After logging it, U could reset the password as per UR requirements
+
+
+
